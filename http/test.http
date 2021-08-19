@@ -1,0 +1,45 @@
+GET http://localhost:3000/list HTTP/1.1
+
+###
+
+GET http://localhost:3000/getUser?asd=asd&name=betty HTTP/1.1
+
+###
+
+POST http://localhost:3000/addUser HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Carson",
+  "password": "SOME PASS"
+}
+
+###
+PUT http://localhost:3000/updateUser HTTP/1.1
+content-type: application/json
+
+{
+  "from" : {
+    "name": "Carson",
+    "password": "SOME PASS"
+  },
+  "to": {
+    "name": "NEW ONE",
+    "password": "NEW PASS"
+  }
+}
+
+###
+PUT http://localhost:3000/updateUser HTTP/1.1
+content-type: application/json
+
+{
+  "from" : {
+    "name": "NO ONE",
+    "password": "SOME PASS"
+  },
+  "to": { "name":"ASDf" }
+}
+
+###
+DELETE http://localhost:3000/deleteUser/Carson HTTP/1.1
